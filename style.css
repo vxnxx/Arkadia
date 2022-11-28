@@ -82,6 +82,7 @@ body {
     color:white;
 }
 
+
 input:focus {
     border:white solid 1px;
     outline: none;
@@ -104,4 +105,11 @@ input:focus {
 .defont {
     font-family: "Poppins";
     font-size:20px;
+}
+
+.defontErr {
+    font-family: "Poppins";
+    text-align: center;
+    font-size:17px;
+    color:red;
 }
