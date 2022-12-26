@@ -38,6 +38,6 @@ if($password == $passwordConf) {
 
 if($isAlreadySet == False && $equalPass && $isEmpty == False) {
     ($con->real_query("INSERT INTO `credentials` (`id`, `username`, `email`, `password`, `grade`, `creation_date`) VALUES (NULL, '$login', '$email', '$password', '4', CURRENT_DATE());"));
-    header('Location: http://localhost/arkadia/index.php+');
+    header('Location: http://localhost/arkadia/index.php');
 }
 ?>

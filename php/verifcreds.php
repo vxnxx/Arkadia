@@ -15,18 +15,20 @@ foreach ($result as $row) {
 
 if (empty($login) || empty($password)) {
     $isEmpty = True;
+} else {
+    $isEmpty = false;
 }
 
 
 
 if (isset($_POST['envoi'])) {
-    if (mysqli_num_rows($result) != 0 && $password == $sqlPassword && $isEmpty == False && $passwordMatch) {
+    if (mysqli_num_rows($result) != 0 && $password == $sqlPassword && $isEmpty == False) {
         header('Location: http://localhost/arkadia/site.html');
     } else {
         if ($isEmpty) {
             header('Location: http://localhost/arkadia/index.php?empty=True');
-        } else {
-            header('Location: http://localhost/arkadia/index.php?invalidPassword=True');
+            }  else {
+             header('Location: http://localhost/arkadia/index.php?invalidPassword=True');
         }
     }
 }
